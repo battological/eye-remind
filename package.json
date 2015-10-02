@@ -1,0 +1,23 @@
+{
+  "name": "eye-remind",
+  "version": "0.0.1",
+  "description": "Reminds you to look away from your computer screen every 20 minutes.",
+  "main": "bundle.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battological/eye-remind.git"
+  },
+  "keywords": [
+    "eyes",
+    "health"
+  ],
+  "author": "Garrick Sherman",
+  "license": "MIT",
+  "dependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "react": "^0.13.3",
+    "watchify": "^3.4.0"
+  }
+}

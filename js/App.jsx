@@ -1,7 +1,9 @@
-App = React.createClass({
+var App = React.createClass({
   render() {
     return (
-      <h2>Hello!</h2>
+    <div>
+      <h2>Hello, world!</h2>
+    </div>
     );
   }
 });

@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Reminds you to look away from your computer screen every 20 minutes.",
   "main": "bundle.js",
-  "scripts": {},
+  "scripts": {
+    "watch": "watchify js/eye.js -t babelify -o bundle.js -v"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/battological/eye-remind.git"

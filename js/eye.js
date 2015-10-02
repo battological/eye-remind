@@ -1,5 +1,5 @@
 global.React = require('react');
 
-require('./App.jsx');
+var App = require('./App.jsx');
 
 React.render(<App />, document.getElementById('render-point'));

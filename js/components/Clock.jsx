@@ -12,8 +12,17 @@ var Clock = React.createClass({
     return ({
       currentClockTime: this.props.screenClockTime,
       currentClock: this.formatMilliseconds(this.props.screenClockTime),
-      mode: 1  // 1 for screen, 0 for away
+      mode: 1,  // 1 for screen, 0 for away
+      clockStatus: null
     });
+  },
+
+  handleClick(time, text) {
+    if (this.state.clockStatus) {  // If we're counting down (either mode)
+      this.stopCountdown();
+    } else {  // If the clock's not counting down
+      this.countdown(this.state.currentClockTime, this.props.lookAwayMsg);
+    }
   },
 
   /**
@@ -28,17 +37,25 @@ var Clock = React.createClass({
     }
 
     // Countdown the clock by 1 second
-    setTimeout(function() {
-      var newTime = this.state.currentClockTime-1000;
-      this.updateClock(newTime);
+    this.setState({
+      clockStatus: setTimeout(function() {
+        var newTime = this.state.currentClockTime-1000;
+        this.updateClock(newTime);
 
-      // If the clock has reached zero, sound the alarm
-      if (!this.state.currentClockTime) {
-        this.soundAlarm(text);
-      } else {  // Otherwise repeat
-        this.countdown(this.state.currentClockTime, text);
-      }
-    }.bind(this), 1000);
+        // If the clock has reached zero, sound the alarm
+        if (!this.state.currentClockTime) {
+          this.soundAlarm(text);
+        } else {  // Otherwise repeat
+          this.countdown(this.state.currentClockTime, text);
+        }
+      }.bind(this), 1000)
+    });
+  },
+
+  stopCountdown() {
+    clearTimeout(this.state.clockStatus);  // Stop the clock
+    this.setState({ clockStatus: null });
+    this.updateClock(this.props.screenClockTime);  // Reset the clock
   },
 
   /**
@@ -102,8 +119,8 @@ var Clock = React.createClass({
   	</div>
         <button 
   	  className="start-clock" 
-	  onClick={this.countdown.bind(this, this.state.currentClockTime, this.props.lookAwayMsg)}>
-	  Start
+	  onClick={this.handleClick}>
+	  {this.state.clockStatus ? 'Stop' : 'Start' }
 	</button>
       </div>
     );

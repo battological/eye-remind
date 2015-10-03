@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Andada';
+  font-style: normal;
+  font-weight: 400;
+  src: url('Andada/Andada-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pragati Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('Pragati_Narrow/PragatiNarrow-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Martel Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('Martel_Sans/MartelSans-Regular.ttf') format('truetype');
+}

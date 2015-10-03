@@ -96,14 +96,14 @@ var Clock = React.createClass({
 
   render() {
     return(
-      <div className="clock">
-        <span className="clock">
+      <div className="clock-container">
+        <div className="clock">
 	  {this.state.currentClock}
-	</span>
+  	</div>
         <button 
-	  className="start-clock" 
+  	  className="start-clock" 
 	  onClick={this.countdown.bind(this, this.state.currentClockTime, this.props.lookAwayMsg)}>
-	  Go
+	  Start
 	</button>
       </div>
     );

@@ -8,6 +8,11 @@ body {
   min-height: 100vh;
 }
 
+header {
+  flex: 1;
+  margin: auto;
+}
+
 header p {
   margin-top: 0;
 }
@@ -19,7 +24,7 @@ h1 {
 }
 
 #render-point {
-  flex: 1;
+  flex: 3;
 }
 
 .clock-container {
@@ -28,10 +33,16 @@ h1 {
 
 .clock {
   font-family: 'Andada', serif;
+  font-size: 2em;
   font-weight: bold;
 }
 
 .start-clock {
+  background-color: #E8E8E8;
+  border: 0;
+  border-radius: 0;
+  font-weight: bold;
+  cursor: pointer;
   width: 100%;
 }
 

@@ -4,7 +4,8 @@
   "description": "Reminds you to look away from your computer screen every 20 minutes.",
   "main": "bundle.js",
   "scripts": {
-    "watch": "watchify js/eye.js -t babelify -o bundle.js -v"
+    "watch": "watchify js/eye.js -t babelify -o bundle.js -v",
+    "bundle": "browserify js/eye.js -t babelify -o bundle.js"
   },
   "repository": {
     "type": "git",

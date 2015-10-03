@@ -1,8 +1,11 @@
+var Clock = require('./Clock.jsx');
+
 var App = React.createClass({
   render() {
     return (
     <div>
-      <h2>Hello, world!</h2>
+      <p>Click "Go" to start!</p>
+      <Clock />
     </div>
     );
   }

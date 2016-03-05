@@ -1,6 +1,6 @@
 {
-  "name": "eye-remind",
-  "version": "0.0.1",
+  "name": "goggle-out",
+  "version": "1.0.0",
   "description": "Reminds you to look away from your computer screen every 20 minutes.",
   "main": "bundle.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/battological/eye-remind.git"
+    "url": "https://github.com/battological/goggle-out.git"
   },
   "keywords": [
     "eyes",
